@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewData["Title"] = "Registration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <body>
+        <h1>Registration </h1>
+        
+        <form asp-controller="Home" asp-action="Welcome">
+            <!--we use the name attribute to map this text input to our parameter in the back end controller-->
+            <fieldset id="leg1">
+                <legend>Personal Info</legend>
+                First Name:<br />
+                <input type="text" name="firstName" /><br />
+                <!--give each input a unique name to insure proper mapping in the back end-->
+                Last Name:<br />
+                <input type="text" name="lastName" /><br />
+                Phone Number:<br />
+                <input type="number" name="phonenumber" required pattern="^[2-9]\d{2}-\d{3}-\d{4}$" /><br />
+
+                Email:<br />
+                <input type="email" name="email" /><br />
+                Password:<br />
+                <input type="password" name="password" /><br />
+                Password:<br />
+                <input type="password" name="passwordtwo" /><br />
+                <!--we use input type submit to submit our form to the assigned controller/action-->
+                <input type="submit" class=" btn btn-primary" name="Register" />
+            </fieldset>
+        </form>
+    </body>
+
+<style>
+    body{
+        background-color:darkorange;
+        background-image: url(https://i.etsystatic.com/16426546/r/il/7683f8/2150006020/il_570xN.2150006020_95ll.jpg);
+        background-repeat:no-repeat;
+        background-position:right;
+    }
+    #leg1{
+        color:black;
+    }
+</style>
+<h1></h1>
+

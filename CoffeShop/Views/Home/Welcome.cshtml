@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewData["Title"] = "Welcome";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Customer
+    <h1>Welcome @ViewBag.Name </h1>
+
+<h5>Now tell me what you want, what you really really want</h5>
+<form>
+    <fieldset id="leg2">
+        <legend>Choice</legend>
+        <div>
+            Temp:<br />
+            Hot<input type="radio" name=" temperature" value="Hot" checked />
+            Cold<input type="radio" name=" temperature" value="Cold" /><br/>
+
+        </div>
+        <div>
+            Coffee:<br/>
+            something<input type="radio" name="e" value="rr" checked />
+            any<input type="radio" name="e" value="rrr" /><br/>
+        </div>
+        <div>
+        Something Else:<br />
+        else<input type="radio" name="s" value="rr" checked />
+        other<input type="radio" name="s" value="e" /><br/>
+            </div>
+        <div>
+            Something Else2:<br />
+            idontknowcoffee <input type="radio" name="a" value="d" checked />
+           really input <input type="radio" name="a" value="s" /><br/>
+        </div>
+        <div>
+        Also something else:<br />
+        Blah<input type="radio" name="b" value="blah" checked />
+        Bleh<input type="radio" name="b" value="bleh"/><br />
+        </div>
+        
+        <!--we use input type submit to submit our form to the assigned controller/action-->
+        <input type="submit" class=" btn btn-primary" name="Register" />
+    </fieldset>
+    <fieldset id=" test drop">
+        <select>
+            <option value="volvo">Baller</option>
+            <option value="saab">Coder</option>
+            <option value="mercedes">Noob</option>
+            <option value="audi">KoolNtheGang</option>
+        </select>
+    </fieldset>
+    
+
+</form>
+<style>
+    body {
+        background-color: mediumpurple;
+        background-image: url(https://i.pinimg.com/236x/40/36/e4/4036e4b881df8d5580f5c1fea82cbcc4--emma-bunton-spice-girls.jpg);
+        background-repeat: no-repeat;
+        background-size:275px;
+        background-position:bottom;
+        background-position:center;
+    }
+
+    #leg1 {
+        color: black;
+    }
+</style>
