@@ -6,7 +6,7 @@
     <body>
         <h1>Registration </h1>
         
-        <form asp-controller="Home" asp-action="Welcome">
+        <form asp-controller="Home" asp-action="Login">
             <!--we use the name attribute to map this text input to our parameter in the back end controller-->
             <fieldset id="leg1">
                 <legend>Personal Info</legend>
@@ -21,9 +21,9 @@
                 Email:<br />
                 <input type="email" name="email" /><br />
                 Password:<br />
-                <input type="password" name="password" /><br />
+                <input type="password" name="password" required/><br />
                 Password:<br />
-                <input type="password" name="passwordtwo" /><br />
+                <input type="password" name="passwordtwo" required/><br />
                 <!--we use input type submit to submit our form to the assigned controller/action-->
                 <input type="submit" class=" btn btn-primary" name="Register" />
             </fieldset>

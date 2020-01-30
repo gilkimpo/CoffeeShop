@@ -136,5 +136,6 @@ C:\Users\gilki\source\repos\CoffeShop\CoffeShop\obj\Debug\netcoreapp3.1\CoffeSho
 C:\Users\gilki\source\repos\CoffeShop\CoffeShop\obj\Debug\netcoreapp3.1\CoffeShop.dll
 C:\Users\gilki\source\repos\CoffeShop\CoffeShop\obj\Debug\netcoreapp3.1\CoffeShop.pdb
 C:\Users\gilki\source\repos\CoffeShop\CoffeShop\obj\Debug\netcoreapp3.1\Razor\Views\Home\Registration.cshtml.g.cs
-C:\Users\gilki\source\repos\CoffeShop\CoffeShop\obj\Debug\netcoreapp3.1\Razor\Views\Home\Welcome.cshtml.g.cs
 C:\Users\gilki\source\repos\CoffeShop\CoffeShop\obj\Debug\netcoreapp3.1\Razor\Views\Home\IncorrectPassword.cshtml.g.cs
+C:\Users\gilki\source\repos\CoffeShop\CoffeShop\obj\Debug\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
+C:\Users\gilki\source\repos\CoffeShop\CoffeShop\obj\Debug\netcoreapp3.1\Razor\Views\Home\Shop.cshtml.g.cs

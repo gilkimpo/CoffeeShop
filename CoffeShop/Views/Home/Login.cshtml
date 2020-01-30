@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Login</h1>
+<form asp-controller="Home" asp-action="Shop">
+
+    <fieldset>
+        User Name <br />
+        <input type="text" name="username" /> <br />
+        Password <br />
+        <input type="password" name="password" required /><br />
+        Password <br />
+        <input type="password" name=" passwordtwo" required /><br />
+        <input type="submit" name="Submit" />
+    </fieldset>
+</form>
+
+
+
+            ViewBag.Name = firstname;
+            ViewBag.Last = lastname;
+            ViewBag.Phone = phonenumber;
+            ViewBag.Email = email;
+
+            if (password == passwordtwo)
+            {
+                return View();
+            }
+            else
+            {
+                return IncorrectPassword();
+            }

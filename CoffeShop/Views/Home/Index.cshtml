@@ -1,12 +1,17 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome to the CandyShop</h1>
-     
+
 </div>
 <a asp-controller="Home" asp-action="Registration" style="color:black"><h1>Registration Page</h1> </a>
+<a asp-controller="Home" asp-action="Login">Returning Users </a>
 <body>
     <style>
         body {
@@ -16,8 +21,7 @@
             background-position: bottom;
             background-size: 470px;
             background-color: slategray;
+        }
     </style>
 
 </body>
-<!--make a form to take text input, which we will use to search our DB-->
-

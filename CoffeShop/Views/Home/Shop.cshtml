@@ -1,0 +1,98 @@
+﻿
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@model List<Items>
+
+@{
+    ViewData["Title"] = "Welcome";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+@{
+    ViewData["Title"] = "Shop";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Shop</h1>
+<table>
+    @foreach (var item in Model)
+    {
+        <tr>
+            
+            <td>@item.Name</td>
+            <td>@item.Description</td>
+            <td>@item.Quantity</td>
+            <td>@item.Price</td>
+            <td>
+                @if (HttpContextAccessor.HttpContext.Session.GetString("session_username") != null)
+                {
+                    <form asp-controller="Home" method="post" asp-action="Shop">
+                        <input type="hidden"  name="itemId" />
+                        <input type="submit" name="submit" value="Buy Now"  />
+                    </form>
+                }
+            </td>
+        </tr>
+    }
+</table>
+<h5>Now tell me what you want, what you really really want</h5>
+<form>
+    <fieldset id="leg2">
+        <legend>Choice</legend>
+        <div>
+            Optimus Prime:<br />
+            Yes<input type="radio" name="Optimus" value="yes" />
+            No<input type="radio" name="Optimus" value="no" /><br />
+
+        </div>
+        <div>
+            Megatron:<br />
+            Yes<input type="radio" name="Megatron" value="yes" />
+            No<input type="radio" name="Megatron" value="yes" /><br />
+        </div>
+        <div>
+            Baby Spice:<br />
+            Yes<input type="radio" name="Baby Spice" value="yes" />
+            No<input type="radio" name="Baby Spice" value="no" /><br />
+        </div>
+        <div>
+            Posh Spice:<br />
+            Yes <input type="radio" name="Posh" value="yes" />
+            No <input type="radio" name="Posh" value="no" /><br />
+        </div>
+        <div>
+            Baby Yoda Mug:<br />
+            Yes<input type="radio" name="baby mug" value="yes" />
+            No<input type="radio" name="baby mug" value="no" /><br />
+        </div>
+
+        <!--we use input type submit to submit our form to the assigned controller/action-->
+        <input type="submit" class=" btn btn-primary" name="Register" />
+    </fieldset>
+    <fieldset id=" test drop">
+        <select>
+            <option value="volvo">Baller</option>
+            <option value="saab">Coder</option>
+            <option value="mercedes">Noob</option>
+            <option value="audi">KoolNtheGang</option>
+        </select>
+    </fieldset>
+
+
+</form>
+<style>
+    body {
+        background-color: mediumpurple;
+        background-image: url(https://i.pinimg.com/236x/40/36/e4/4036e4b881df8d5580f5c1fea82cbcc4--emma-bunton-spice-girls.jpg);
+        background-repeat: no-repeat;
+        background-size: 275px;
+        background-position: bottom;
+        background-position: center;
+    }
+
+    #leg1 {
+        color: black;
+    }
+</style>
